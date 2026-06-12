@@ -1,0 +1,8 @@
+{
+  "name": "Micro-Store AI Orchestrator",
+  "description": "An enterprise-grade dashboard for an AI-Powered Micro-Store Agent Platform managing product discovery, pricing, inventory, and multiple specialized agents.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
