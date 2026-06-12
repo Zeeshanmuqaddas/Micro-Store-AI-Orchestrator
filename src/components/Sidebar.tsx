@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, BrainCircuit, Box, Activity, Megaphone, Users, Settings, LogOut, Archive, Network } from 'lucide-react';
+import { LayoutDashboard, BrainCircuit, Box, Activity, Megaphone, Users, Settings, LogOut, Archive, Network, ShieldCheck } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 interface SidebarProps {
@@ -17,6 +17,7 @@ export function Sidebar({ currentView, onViewChange }: SidebarProps) {
     { name: 'Optimization', id: 'optimization', icon: Activity },
     { name: 'Inventory', id: 'inventory', icon: Archive },
     { name: 'Marketing', id: 'marketing', icon: Megaphone },
+    { name: 'Protocol SIFT (IR)', id: 'sift', icon: ShieldCheck },
     { name: 'Customers', id: 'customers', icon: Users },
   ];
 

@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { agents, getAgentMetrics, llmPerformanceData } from '../data';
-import { Bot, Activity, BrainCircuit, Box, Search, MessagesSquare, BarChart as BarChartIcon, Server, Cpu, X, Terminal } from 'lucide-react';
+import { Bot, Activity, BrainCircuit, Box, Search, MessagesSquare, BarChart as BarChartIcon, Server, Cpu, X, Terminal, ShieldAlert } from 'lucide-react';
 import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, ScatterChart, Scatter, CartesianGrid, ZAxis, Cell } from 'recharts';
 import { AgentInfo } from '../types';
 
@@ -10,6 +10,8 @@ const FAKE_TASKS: Record<string, string[]> = {
   'Multi-Model Gateway': ['Evaluating task types', 'Comparing OpenAI vs Gemini cost', 'Routing to Claude for reasoning', 'Normalizing response schema', 'Waiting for external LLM inference'],
   'AI / ML Agent Layer': ['Predicting SKU stock demand', 'Generating personalized discounts', 'Performing sentiment analysis', 'Clustering customer embeddings', 'Idle'],
   'RPA Execution Layer': ['Generating invoices', 'Updating ERP/CRM systems', 'Sending purchase orders', 'Logging compliance transactions', 'Idle'],
+  'SIFT DFIR Orchestrator': ['Forming investigation hypothesis', 'Validating cross-source findings', 'Generating technical timeline', 'Enforcing evidence integrity', 'Idle'],
+  'SIFT Forensics Layer': ['Analyzing process tree execution', 'Detecting persistence mechanisms', 'Extracting MFT timeline', 'Correlating PCAP with Sysmon logs', 'Idle'],
 };
 
 const LOG_MESSAGES = [
@@ -79,6 +81,8 @@ export function AgentStatusDashboard() {
       case 'Multi-Model Gateway': return <Server className="w-5 h-5 text-purple-500" />;
       case 'AI / ML Agent Layer': return <Bot className="w-5 h-5 text-blue-500" />;
       case 'RPA Execution Layer': return <Cpu className="w-5 h-5 text-emerald-500" />;
+      case 'SIFT DFIR Orchestrator': return <ShieldAlert className="w-5 h-5 text-rose-500" />;
+      case 'SIFT Forensics Layer': return <Search className="w-5 h-5 text-amber-500" />;
       default: return <Box className="w-5 h-5 text-gray-500" />;
     }
   };

@@ -29,6 +29,10 @@ export const agents: AgentInfo[] = [
   { id: '6', name: 'Billing & Invoicing Bot', role: 'RPA Execution Layer', status: 'idle', lastActive: '1h ago', currentTask: 'Waiting for billing events', model: 'UiPath Robot' },
   { id: '7', name: 'Supplier Management Bot', role: 'RPA Execution Layer', status: 'running', lastActive: 'Just now', currentTask: 'Updating ERP/CRM systems', model: 'UiPath Robot' },
   { id: '8', name: 'Compliance & Audit Bot', role: 'RPA Execution Layer', status: 'running', lastActive: '2m ago', currentTask: 'Logging transactions for audit', model: 'UiPath Robot' },
+  { id: '9', name: 'Protocol SIFT Core', role: 'SIFT DFIR Orchestrator', status: 'running', lastActive: 'Just now', currentTask: 'Evaluating forensic evidence integrity', model: 'LangGraph / CrewAI' },
+  { id: '10', name: 'Disk Analysis Agent', role: 'SIFT Forensics Layer', status: 'idle', lastActive: '10m ago', currentTask: 'Awaiting E01 image upload', model: 'Gemini 1.5 Pro' },
+  { id: '11', name: 'Memory Analysis Agent', role: 'SIFT Forensics Layer', status: 'running', lastActive: 'Just now', currentTask: 'Analyzing Volatility artifacts', model: 'Claude 3.5 Sonnet' },
+  { id: '12', name: 'Log & Network Agent', role: 'SIFT Forensics Layer', status: 'running', lastActive: '1m ago', currentTask: 'Correlating Sysmon & PCAP data', model: 'OpenAI GPT-4o' },
 ];
 
 export const keyMetrics: Metric[] = [

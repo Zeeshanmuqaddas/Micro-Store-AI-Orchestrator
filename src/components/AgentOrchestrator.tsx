@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { agents } from '../data';
-import { Activity, BrainCircuit, Box, Server, Cpu, Play, Square, RefreshCcw, Network } from 'lucide-react';
+import { Activity, BrainCircuit, Box, Server, Cpu, Play, Square, RefreshCcw, Network, ShieldAlert } from 'lucide-react';
 import { AgentInfo } from '../types';
 
 export function AgentOrchestrator() {
@@ -28,6 +28,7 @@ export function AgentOrchestrator() {
     if (role.includes('Gateway')) return <Network className="w-6 h-6 text-purple-500" />;
     if (role.includes('AI') || role.includes('ML')) return <Server className="w-6 h-6 text-blue-500" />;
     if (role.includes('RPA')) return <Cpu className="w-6 h-6 text-amber-500" />;
+    if (role.includes('SIFT')) return <ShieldAlert className="w-6 h-6 text-rose-500" />;
     return <Box className="w-6 h-6 text-gray-500" />;
   };
 

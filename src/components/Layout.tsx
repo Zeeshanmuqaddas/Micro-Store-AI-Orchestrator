@@ -7,8 +7,9 @@ import { ProductIntel } from './ProductIntel';
 import { InventoryPricing } from './InventoryPricing';
 import { InventoryManagement } from './InventoryManagement';
 import { MarketingModule } from './MarketingModule';
+import { ProtocolSiftModule } from './ProtocolSiftModule';
 import { NotificationOverlay } from './NotificationOverlay';
-import { SecurityBanner } from './SecurityBanner';
+import { SecurityPosture } from './SecurityPosture';
 import { useAuth } from '../contexts/AuthContext';
 import { Bell, Search, User } from 'lucide-react';
 
@@ -25,6 +26,7 @@ export function Layout() {
       case 'optimization': return <InventoryPricing />;
       case 'inventory': return <InventoryManagement />;
       case 'marketing': return <MarketingModule />;
+      case 'sift': return <ProtocolSiftModule />;
       case 'customers': return <div className="text-gray-500 flex items-center justify-center h-64 border-2 border-dashed border-gray-200 rounded-xl">Customer Intelligence Module (Analyzing Sentiment...)</div>;
       default: return <DashboardOverview />;
     }
@@ -58,7 +60,7 @@ export function Layout() {
           </div>
         </header>
 
-        <SecurityBanner />
+        <SecurityPosture />
 
         <main className="flex-1 overflow-y-auto p-8">
           <div className="max-w-7xl mx-auto">
