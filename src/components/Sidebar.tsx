@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, BrainCircuit, Box, Activity, Megaphone, Users, Settings, LogOut, Archive } from 'lucide-react';
+import { LayoutDashboard, BrainCircuit, Box, Activity, Megaphone, Users, Settings, LogOut, Archive, Network } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 interface SidebarProps {
@@ -11,6 +11,7 @@ export function Sidebar({ currentView, onViewChange }: SidebarProps) {
   const { logout } = useAuth();
   const navigation = [
     { name: 'CEO Overview', id: 'overview', icon: LayoutDashboard },
+    { name: 'Workflow Orchestrator', id: 'orchestrator', icon: Network },
     { name: 'Agent Fleet', id: 'agents', icon: BrainCircuit },
     { name: 'Product Intel', id: 'products', icon: Box },
     { name: 'Optimization', id: 'optimization', icon: Activity },
@@ -27,8 +28,8 @@ export function Sidebar({ currentView, onViewChange }: SidebarProps) {
             <BrainCircuit className="h-6 w-6 text-white" />
           </div>
           <div>
-            <h2 className="text-xl font-bold tracking-tight text-white leading-tight">Core OS v3.0</h2>
-            <p className="text-[10px] text-indigo-300 font-medium tracking-widest uppercase">Orchestrator Platform</p>
+            <h2 className="text-xl font-bold tracking-tight text-white leading-tight">Maestro OS v3.0</h2>
+            <p className="text-[10px] text-indigo-300 font-medium tracking-widest uppercase">UiPath Orchestrator</p>
           </div>
         </div>
         

@@ -21,13 +21,14 @@ export const getAgentMetrics = (agentId: string): AgentMetricsData[] => {
 };
 
 export const agents: AgentInfo[] = [
-  { id: '1', name: 'Core Orchestrator Agent', role: 'Master Controller', status: 'running', lastActive: 'Just now', currentTask: 'Coordinating multi-agent workflows', model: 'Vertex AI (Gemini 1.5 Pro)' },
-  { id: '2', name: 'Observability Intelligence Agent', role: 'Splunk Observability Track', status: 'idle', lastActive: '2m ago', currentTask: 'Real-time anomaly detection', model: 'BigQuery Analytics' },
-  { id: '3', name: 'Security Intelligence Agent', role: 'Splunk Security Track', status: 'running', lastActive: 'Just now', currentTask: 'SIEM correlation rules execution', model: 'Vertex AI Threat Models' },
-  { id: '4', name: 'Developer Experience Agent', role: 'Splunk Dev Platform Track', status: 'running', lastActive: '1m ago', currentTask: 'CI/CD pipeline optimization', model: 'LangChain/LangGraph' },
-  { id: '5', name: 'Machine Learning & Prediction', role: 'Vertex AI Layer', status: 'idle', lastActive: '15m ago', currentTask: 'Demand forecasting', model: 'Vertex AI Pipelines' },
-  { id: '6', name: 'Multi-LLM Orchestration Agent', role: 'External AI Layer', status: 'idle', lastActive: '1h ago', currentTask: 'Routing dynamic LLM tasks', model: 'OpenRouter / Hybrid' },
-  { id: '7', name: 'Governance & Compliance Agent', role: 'Compliance Validation', status: 'running', lastActive: 'Just now', currentTask: 'Validating data privacy policies', model: 'Policy-as-Code Engine' },
+  { id: '1', name: 'UiPath Maestro Core', role: 'Orchestrator Layer', status: 'running', lastActive: 'Just now', currentTask: 'Routing hybrid AI + RPA workflows', model: 'UiPath Automation Cloud' },
+  { id: '2', name: 'LLM Router Agent', role: 'Multi-Model Gateway', status: 'running', lastActive: '1m ago', currentTask: 'Evaluating task for OpenAI vs Gemini cost', model: 'FastAPI Router' },
+  { id: '3', name: 'Demand Forecasting Agent', role: 'AI / ML Agent Layer', status: 'idle', lastActive: '15m ago', currentTask: 'Predicting SKU stock demand', model: 'Vertex AI / BigQuery ML' },
+  { id: '4', name: 'Recommendation Agent', role: 'AI / ML Agent Layer', status: 'running', lastActive: 'Just now', currentTask: 'Generating personalized discounts', model: 'OpenAI GPT / Claude' },
+  { id: '5', name: 'Customer Intelligence Agent', role: 'AI / ML Agent Layer', status: 'idle', lastActive: '5m ago', currentTask: 'Clustering high-value customers', model: 'Gemini (Vertex AI)' },
+  { id: '6', name: 'Billing & Invoicing Bot', role: 'RPA Execution Layer', status: 'idle', lastActive: '1h ago', currentTask: 'Waiting for billing events', model: 'UiPath Robot' },
+  { id: '7', name: 'Supplier Management Bot', role: 'RPA Execution Layer', status: 'running', lastActive: 'Just now', currentTask: 'Updating ERP/CRM systems', model: 'UiPath Robot' },
+  { id: '8', name: 'Compliance & Audit Bot', role: 'RPA Execution Layer', status: 'running', lastActive: '2m ago', currentTask: 'Logging transactions for audit', model: 'UiPath Robot' },
 ];
 
 export const keyMetrics: Metric[] = [

@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { agents, keyMetrics, revenueData, productOpportunities } from '../data';
 import { ArrowUpRight, ArrowDownRight, Activity, TrendingUp, Package, AlertCircle } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { CostEstimationWidget } from './CostEstimationWidget';
 
 export function DashboardOverview() {
   const runningAgents = agents.filter(a => a.status === 'running').length;
@@ -97,6 +98,10 @@ export function DashboardOverview() {
             ))}
           </CardContent>
         </Card>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <CostEstimationWidget />
       </div>
     </div>
   );

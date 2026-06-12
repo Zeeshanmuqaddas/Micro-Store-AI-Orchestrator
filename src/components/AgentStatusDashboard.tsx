@@ -6,13 +6,10 @@ import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, ScatterCha
 import { AgentInfo } from '../types';
 
 const FAKE_TASKS: Record<string, string[]> = {
-  'Master Controller': ['Decomposing tasks to sub-agents', 'Monitoring execution globally', 'Assessing API costs', 'Evaluating total system compliance', 'Idle'],
-  'Splunk Observability Track': ['Real-time anomaly detection', 'Parsing Splunk traces', 'Waiting for alerts', 'Executing Root Cause Analysis (RCA)', 'Logging CPU spikes'],
-  'Splunk Security Track': ['Running SIEM correlation rules', 'Analyzing threat logs', 'Idle', 'Executing Splunk SOAR playbooks', 'Generating compliance reports'],
-  'Splunk Dev Platform Track': ['Executing CI/CD pipeline automation', 'Fetching GitHub Actions state', 'Deploying LangGraph endpoints', 'Generating automated dashboards', 'Idle'],
-  'Vertex AI Layer': ['Executing predictive models', 'Re-training BigQuery ML', 'Idle', 'Generating user recommendations', 'Forecasting platform load'],
-  'External AI Layer': ['Evaluating cheapest LLM endpoint', 'Triggering fallback models', 'Executing prompt across Gemini 1.5 Pro', 'Routing to GPT-4o context', 'Waiting for external LLM inference'],
-  'Compliance Validation': ['Testing OPA/Rego policies', 'Checking SOC2 mandates', 'Auditing API key accesses via Secret Manager', 'Idle']
+  'Orchestrator Layer': ['Receiving business events', 'Routing task to RPA bot', 'Enforcing BPMN SLAs', 'Logging decision for audit', 'Idle'],
+  'Multi-Model Gateway': ['Evaluating task types', 'Comparing OpenAI vs Gemini cost', 'Routing to Claude for reasoning', 'Normalizing response schema', 'Waiting for external LLM inference'],
+  'AI / ML Agent Layer': ['Predicting SKU stock demand', 'Generating personalized discounts', 'Performing sentiment analysis', 'Clustering customer embeddings', 'Idle'],
+  'RPA Execution Layer': ['Generating invoices', 'Updating ERP/CRM systems', 'Sending purchase orders', 'Logging compliance transactions', 'Idle'],
 };
 
 const LOG_MESSAGES = [
@@ -78,22 +75,19 @@ export function AgentStatusDashboard() {
 
   const getIcon = (role: string) => {
     switch(role) {
-      case 'Master Controller': return <BrainCircuit className="w-5 h-5 text-indigo-500" />;
-      case 'Splunk Observability Track': return <Activity className="w-5 h-5 text-blue-500" />;
-      case 'Splunk Security Track': return <Bot className="w-5 h-5 text-rose-500" />;
-      case 'Splunk Dev Platform Track': return <Cpu className="w-5 h-5 text-emerald-500" />;
-      case 'Vertex AI Layer': return <Server className="w-5 h-5 text-amber-500" />;
-      case 'External AI Layer': return <MessagesSquare className="w-5 h-5 text-purple-500" />;
-      case 'Compliance Validation': return <Box className="w-5 h-5 text-gray-500" />;
-      default: return <Bot className="w-5 h-5 text-gray-500" />;
+      case 'Orchestrator Layer': return <BrainCircuit className="w-5 h-5 text-indigo-500" />;
+      case 'Multi-Model Gateway': return <Server className="w-5 h-5 text-purple-500" />;
+      case 'AI / ML Agent Layer': return <Bot className="w-5 h-5 text-blue-500" />;
+      case 'RPA Execution Layer': return <Cpu className="w-5 h-5 text-emerald-500" />;
+      default: return <Box className="w-5 h-5 text-gray-500" />;
     }
   };
 
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900">Enterprise AI Orchestrator OS</h1>
-        <p className="text-gray-500 mt-1">Multi-agent control plane across Splunk, Vertex AI, and GCP microservices</p>
+        <h1 className="text-3xl font-bold tracking-tight text-gray-900">UiPath Maestro OS v3.0</h1>
+        <p className="text-gray-500 mt-1">Multi-agent control plane across Automation Cloud, Vertex AI, and external LLMs</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">

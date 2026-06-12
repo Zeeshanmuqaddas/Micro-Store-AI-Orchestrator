@@ -25,10 +25,10 @@ export function LoginScreen() {
             <BrainCircuit className="h-8 w-8 text-white" />
           </div>
           <h2 className="text-center text-3xl font-extrabold text-gray-900 tracking-tight">
-            Enterprise AI Orchestrator OS
+            Micro-Store AI Orchestrator
           </h2>
           <p className="mt-2 text-center text-sm text-gray-500 tracking-widest uppercase font-medium">
-            Core Orchestrator Agent v3.0
+            UiPath Maestro + Multi-LLM Agentic System
           </p>
         </div>
         
