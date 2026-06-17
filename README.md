@@ -1,3 +1,7 @@
+About
+Micro-Store AI Orchestrator is an intelligent automation system that coordinates multiple AI agents to manage inventory, pricing, analytics,
+
+
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
 </div>
