@@ -3,6 +3,7 @@ import { Sidebar } from './Sidebar';
 import { DashboardOverview } from './DashboardOverview';
 import { AgentStatusDashboard } from './AgentStatusDashboard';
 import { AgentOrchestrator } from './AgentOrchestrator';
+import { AnalyticsDashboard } from './AnalyticsDashboard';
 import { ProductIntel } from './ProductIntel';
 import { InventoryPricing } from './InventoryPricing';
 import { InventoryManagement } from './InventoryManagement';
@@ -22,6 +23,7 @@ export function Layout() {
       case 'overview': return <DashboardOverview />;
       case 'orchestrator': return <AgentOrchestrator />;
       case 'agents': return <AgentStatusDashboard />;
+      case 'analytics': return <AnalyticsDashboard />;
       case 'products': return <ProductIntel />;
       case 'optimization': return <InventoryPricing />;
       case 'inventory': return <InventoryManagement />;
